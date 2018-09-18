@@ -6,8 +6,9 @@
 \usage{
 cfa2(formla, tvals, yvals, data, xformla1 = NULL, method1 = "dr",
   link1 = "logit", tau1 = seq(0.01, 0.99, 0.01), condDistobj1 = NULL,
-  xformla2 = NULL, method2 = "dr", link2 = "logit", tau2 = seq(0.01,
-  0.99, 0.01), condDistobj2 = NULL, se = TRUE, iters = 100, cl = 1)
+  xformla2 = NULL, method2 = "dr", link2 = "logit",
+  tau2 = seq(0.01, 0.99, 0.01), condDistobj2 = NULL, se = TRUE,
+  iters = 100, cl = 1)
 }
 \arguments{
 \item{formla}{a formula y ~ treatment}
@@ -63,7 +64,7 @@ the same as cfa method except it computes two results at the
 }
 \examples{
 #' data(igm)
-tvals <- seq(10,12,length.out=8)
+tvals <- seq(10,12,length.out=5)
 yvals <- seq(quantile(igm$lcfincome, .05), quantile(igm$lcfincome, .95), length.out=50)
 
 ## obtain counterfactual results using quantile regression with
